@@ -12,8 +12,8 @@ if __name__ == "__main__":
     output_path = 'dataset/tribunais_eleitorais/tre-ne.xes'
 
     # Unzip dataset 
-    # with zipfile.ZipFile(base_path + zip_file, 'r') as zip_ref:
-    #     zip_ref.extractall(path=base_path)
+    with zipfile.ZipFile(base_path + zip_file, 'r') as zip_ref:
+        zip_ref.extractall(path=base_path + 'tribunais_eleitorais/')
 
     df_code_subj = my_loader.load_df_subject(base_path)
     df_code_type = my_loader.load_df_classes(base_path)

@@ -35,6 +35,10 @@ if __name__ == '__main__':
                                           importance_type, 
                                           params)
 
+    if DEBUG:
+        print('Feature importance:')
+        print(df_import)
+
     gen_bar_plot(df_import, top_n_import)
 
 
@@ -49,6 +53,10 @@ if __name__ == '__main__':
                                           random_seed, 
                                           importance_type, 
                                           params)
+
+    if DEBUG:
+        print('Feature importance:')
+        print(df_import)
 
     gen_bar_plot(df_import, top_n_import)
 

@@ -73,7 +73,7 @@ def get_traces_duration(df_mov):
         agg({'movimentoDataHora':['min','max']})
     df_work['duration'] = (df_work[('movimentoDataHora', 'max')] - \
                            df_work[('movimentoDataHora', 'min')])\
-                           / np.timedelta64(1, 'M')
+                           / np.timedelta64(1, 'W')
 
     
     return df_work[['duration']]
